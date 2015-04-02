@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/bootstrapcss", "~/Content/commoncss")
+</head>
+<body>
+    <div class="container">
+        <div class="header clearfix">
+            <div class="pull-right" style="margin-top: 10px;">
+                <ul class="list-unstyled">
+                    <li>
+                        <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
+                        <span> +7 (921) 222-33-44</span>
+                    </li>
+                    <li>
+                        <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+                        <a href="mailto:info@radexmetal.ru"> info@radexmetal.ru</a>
+                    </li>
+                    <li>
+                        <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+                        <a href="mailto:radexmetal@mail.ru"> radexmetal@mail.ru</a>
+                    </li>
+                </ul>
+            </div>
+            <h3 class="text-muted">RADEX METAL GROUP</h3>
+        </div>
+        <div class="jumbotron">
+            <h2>Листовая сталь и рулоны</h2>
+        </div>
+        <div>
+            @RenderSection("navigation")
+        </div>
+        <div class="row marketing">
+            @RenderBody()
+        </div>
+        <footer class="footer">
+            <p>&copy; 2011-2015 Radex Metal Group</p>
+        </footer>
+        </div>
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrapjs")
+</body>
+</html>

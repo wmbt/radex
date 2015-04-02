@@ -1,0 +1,15 @@
+﻿.jumbotron {
+    background-image: url(Images/bg.png);
+    background-color: transparent;
+    background-position: 0% 25%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-bottom: 20px;
+    padding-left: 30px !important;
+}
+h2 {
+    text-align: left;
+    text-shadow: 1px 1px 1px gray;
+    padding-top: 120px;
+    color: whitesmoke;
+}

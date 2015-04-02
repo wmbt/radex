@@ -1,0 +1,40 @@
+﻿@{
+    ViewBag.Title = "Radex Metal Group";
+    var dataRows = ((string[][])ViewData["Cells"]).Skip(1);
+    var caption = ((string[][])ViewData["Cells"]).First();
+}
+
+@section navigation{
+<ul class="nav nav-tabs">
+    <li role="presentation" class="active">
+        @Html.ActionLink("Прайс", "Index")
+    </li>
+    @*<li role="presentation">
+        @Html.ActionLink("Титан", "Titan")
+    </li>*@
+    <li role="presentation">
+        @Html.ActionLink("О компании", "About")
+    </li>
+</ul>
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            @foreach (var cell in caption)
+            {
+                <td>@cell</td>
+            }
+        </tr>
+    </thead>
+    
+    @foreach (var row in dataRows)
+    {
+        <tr>
+            @foreach (var cell in row)
+            {
+                <td>@cell</td>
+            }
+        </tr>
+    }
+</table>

@@ -1,0 +1,19 @@
+﻿@{
+    ViewBag.Title = "О компании";
+}
+
+@section navigation{
+    <ul class="nav nav-tabs">
+        <li role="presentation">
+            @Html.ActionLink("Прайс", "Index")
+        </li>
+        @*<li role="presentation">
+                @Html.ActionLink("Титан", "Titan")
+            </li>*@
+        <li role="presentation" class="active">
+            @Html.ActionLink("О компании", "About")
+        </li>
+    </ul>
+}
+
+<h3>О компании</h3>
