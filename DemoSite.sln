@@ -11,6 +11,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{DFBFECD6-77DF-4031-B7F7-30436D65F6BD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Site2", "Site2\Site2.csproj", "{2DEE1F64-3786-42AD-A0FF-3BDCFDDE34EF}"
+	ProjectSection(ProjectDependencies) = postProject
+		{DFBFECD6-77DF-4031-B7F7-30436D65F6BD} = {DFBFECD6-77DF-4031-B7F7-30436D65F6BD}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
