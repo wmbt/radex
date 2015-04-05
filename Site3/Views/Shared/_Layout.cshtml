@@ -7,22 +7,88 @@
     @Styles.Render("~/Content/bootstrapcss", "~/Content/commoncss")
 </head>
 <body>
+      <div id="masthead">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7">
+                    <h1>
+                        Металлопрокат
+                        <p class="lead">Продажа металлопроката различных видов</p>
+                    </h1>
+                </div>
+                <div class="col-md-5">
+                    <div class="well well-lg">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <img src="~/Content/polosa2.png" class="img-responsive">
+                            </div>
+                            <div class="col-sm-6">
+                                Горячекатаная полоса обладает высокой прочностью и длительным сроком эксплуатации. 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!--/container-->
+    </div><!--/masthead-->
+    <!--main-->
     <div class="container">
-        <div class="page-header">
-            @RenderSection("navigation")
-        </div>
-        <div class="row image-row">
-            <h3>Продажа металлопроката оптом и в розницу</h3>
-            <h5>Металлопрокат – товары и заготовки, сделанные из металла, проходящие специальную обработку на прокатном станке. 
-            Данная операция характеризуется тем, что металл обжимается между двумя валиками, которые вращаются в противоположные стороны. 
-            В зазор между этими валиками затягивают заготовку, а после она уже обжимается и вытягивается.</h5>
-        </div>
         <div class="row">
-            @RenderBody()
-        </div>
-        <footer class="footer">
-            <p>&copy; Фирма 2 2015 г.</p>
-        </footer>
-    </div>
+            <!--left-->
+            <div class="col-md-3" id="leftCol">
+            @RenderSection("navigation")    
+            </div><!--/left-->
+            <!--right-->
+            <div class="col-md-9">
+                <h2 id="sec0">Производство</h2>
+                <p>
+                    Основная деятельность нашей компании характеризуется поставкой производствам стали огромного диапазона марок и размеров. 
+                    Мы не занимаемся перекупкой, а просто продаем металлопрокат в Москве из наличия на наших складах, что и обуславливает наши низкие цены.
+                </p>
+
+                <hr>
+                <p>
+                    Металлопрокат – товары и заготовки, сделанные из металла, проходящие специальную обработку на прокатном станке. 
+                    Данная операция характеризуется тем, что металл обжимается между двумя валиками, которые вращаются в противоположные стороны. 
+                    В зазор между этими валиками затягивают заготовку, а после она уже обжимается и вытягивается.
+                </p>
+                <div>
+                    @RenderBody()
+                </div>
+                <hr>
+                <footer class="footer">
+                    <p>&copy; Фирма 3 2015 г.</p>
+                </footer>
+             </div><!--/right-->
+        </div><!--/row-->
+    </div><!--/container-->
 </body>
 </html>
+@*<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>@ViewBag.Title</title>
+        @Styles.Render("~/Content/bootstrapcss", "~/Content/commoncss")
+    </head>
+    <body>
+        <div class="container">
+            <div class="page-header">
+                @RenderSection("navigation")
+            </div>
+            <div class="row image-row">
+                <h3>Продажа металлопроката оптом и в розницу</h3>
+                <h5>Металлопрокат – товары и заготовки, сделанные из металла, проходящие специальную обработку на прокатном станке.
+                Данная операция характеризуется тем, что металл обжимается между двумя валиками, которые вращаются в противоположные стороны.
+                В зазор между этими валиками затягивают заготовку, а после она уже обжимается и вытягивается.</h5>
+            </div>
+            <div class="row">
+                @RenderBody()
+            </div>
+            <footer class="footer">
+                <p>&copy; Фирма 2 2015 г.</p>
+            </footer>
+        </div>
+    </body>
+    </html>*@

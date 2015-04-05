@@ -1,16 +1,21 @@
-﻿@model Site2.Models.PriceTable
-@{ ViewBag.Title = "Фирма 2"; }
+﻿@{ ViewBag.Title = "Фирма 3"; }
 
 @section navigation{
-<ul class="nav nav-pills">
+
+<ul class="nav nav-pills nav-stacked" id="sidebar">
     <li class="active">@Html.ActionLink("Прайс", "Index")</li>
-    <li class="">@Html.ActionLink("О компании", "About")</li>
-    <li class="">@Html.ActionLink("Контакты", "Info")</li>
+    <li>@Html.ActionLink("О компании", "About")</li>
+    <li>@Html.ActionLink("Контакты", "Info")</li>
 </ul>
 }
-<h2>Труба — бесшовная, нержавеющая, электросварная</h2>
+
+<h2 id="sec1">Прайс-лист</h2>
+<p>
+    Цены указаны с НДС при покупке более одной тонны.
+    При покупке от 500 до 1000 кг наценка — 5% от оптовой цены, от 100 до 500 кг наценка — 10%.
+</p>
+
 <table class="table table-striped table-bordered">
-    <caption>Цены: (Профиль: Труба, сталь: любая)</caption>
     <thead>
         <tr>
             <th>Размер/Диаметр</th>
