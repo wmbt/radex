@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/bootstrapcss", "~/Content/commoncss")
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            @RenderSection("navigation")
+        </div>
+        <div class="row image-row">
+            <h3>Продажа металлопроката оптом и в розницу</h3>
+            <h5>Металлопрокат – товары и заготовки, сделанные из металла, проходящие специальную обработку на прокатном станке. 
+            Данная операция характеризуется тем, что металл обжимается между двумя валиками, которые вращаются в противоположные стороны. 
+            В зазор между этими валиками затягивают заготовку, а после она уже обжимается и вытягивается.</h5>
+        </div>
+        <div class="row">
+            @RenderBody()
+        </div>
+        <footer class="footer">
+            <p>&copy; Фирма 2 2015 г.</p>
+        </footer>
+    </div>
+</body>
+</html>
