@@ -1,8 +1,6 @@
-﻿@{
-    ViewBag.Title = "Radex Metal Group";
-    var dataRows = ((string[][])ViewData["Cells"]).Skip(1);
-    var caption = ((string[][])ViewData["Cells"]).First();
-}
+﻿@model DemoSite.Models.PriceTable
+
+@{ ViewBag.Title = "Radex Metal Group"; }
 
 @section navigation{
 <ul class="nav nav-tabs">
@@ -21,20 +19,20 @@
 <table class="table">
     <thead>
         <tr>
-            @foreach (var cell in caption)
-            {
-                <td>@cell</td>
-            }
+            <td>Вид</td>
+            <td>Сторона квадрата</td>
+            <td>Сталь</td>
+            <td>Цена, руб/тн</td>
         </tr>
     </thead>
     
-    @foreach (var row in dataRows)
+    @foreach (var item in Model.Items)
     {
         <tr>
-            @foreach (var cell in row)
-            {
-                <td>@cell</td>
-            }
+            <td>@item.Kind</td>
+            <td>@item.Width</td>
+            <td>@item.SteelMark</td>
+            <td>@item.Price</td>
         </tr>
     }
 </table>

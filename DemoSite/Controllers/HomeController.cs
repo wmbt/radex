@@ -1,5 +1,8 @@
-﻿using System;
+﻿using DataAccess;
+using DemoSite.Models;
+using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Web;
@@ -11,15 +14,17 @@ namespace DemoSite.Controllers
     {
         //
         // GET: /Home/
-
-        public ActionResult Index()
+                
+        public ActionResult Index(string colName = "id", string order = "asc")
         {
-            string path = HttpContext.Server.MapPath("~/Data/data.csv");
-            var strings = System.IO.File.ReadAllLines(path, Encoding.GetEncoding(1251))
-                .Select(x => x.Split(';').ToArray()).ToArray();
-            ViewData["Cells"] = strings;
+            var cs = ConfigurationManager.ConnectionStrings["DefaultDb"];
+            var repo = new Repository(cs.ConnectionString);
             
-            return View();
+            return View(new PriceTable {
+                Items = repo.GetItems("RADEXMETAL_PRICE", x => new TableItem(x), colName + " " + order).ToArray(),
+                SortColumn = colName,
+                SortOrder = order
+            });
         }
         public ActionResult Titan() 
         {
