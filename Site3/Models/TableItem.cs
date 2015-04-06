@@ -12,7 +12,7 @@ namespace Site3.Models
         public string Size { get; set; }
         public string SteelMark { get; set; }
         public double Price { get; set; }
-        public string Note { get; set; }
+        public string Product { get; set; }
         
         public TableItem(IDataRecord r) 
         {
@@ -20,7 +20,7 @@ namespace Site3.Models
             Size = (string)r["SIZE"];
             SteelMark = (string)r["STEEL_MARK"];
             Price = (double)r["PRICE"];
-            Note = (string)r["NOTE"];
+            Product = (string)r["PRODUCT"];
         }
     }
 
