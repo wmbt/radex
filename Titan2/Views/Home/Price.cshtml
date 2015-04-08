@@ -1,0 +1,44 @@
+﻿@model Titan2.Models.PriceTable
+@{ ViewBag.Title = "Прайс"; }
+
+@section navigation{
+    <ul class="nav navbar-nav">
+        <li>@Html.ActionLink("Главная", "Index")</li>
+        <li class="active">@Html.ActionLink("Прайс", "Prices")</li>
+        <li>@Html.ActionLink("Контакты", "Info")</li>
+        <li>@Html.ActionLink("О компании", "About")</li>
+    </ul>
+}
+
+<div class="row">
+    <div class="box">
+        <div class="col-lg-12" style="min-height: 500px;">
+            <hr>
+            <h2 class="intro-text text-center">
+                <strong>Цены</strong>
+            </h2>
+            <hr>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Предложение</th>
+                        <th>Марка</th>
+                        <th>Цена</th>
+                        <th>Размер</th>
+                    </tr>
+                </thead>
+
+                @foreach (var item in Model.Items)
+                {
+                    <tr>
+                        <td>@item.Offer</td>
+                        <td>@item.Mark</td>
+                        <td>@item.Price</td>
+                        <td>@item.Size</td>
+                    </tr>
+                }
+            </table>
+
+        </div>
+    </div>
+</div>

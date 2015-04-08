@@ -1,0 +1,61 @@
+﻿@model Titan1.Models.PriceTable
+@{ ViewBag.Title = "Titan 1"; }
+
+@section navigation{
+<ul class="nav navbar-nav">
+    <li class="active">@Html.ActionLink("Прайс", "Index")</li>
+    <li>@Html.ActionLink("Контакты", "Info")</li>
+    <li>@Html.ActionLink("О компании", "About")</li>
+</ul>
+}
+<section style="padding-bottom: 20px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="section-heading">Ферротитан</h1>
+                <p class="lead section-lead">Ферротитан - легирующий сплав железа и титана с минимальным 20 % содержанием титана по массе и максимальным 75% - по массе, полученный путем восстановления или переплава.</p>
+                <p class="section-paragraph">
+                    Ферротитан используется в металлургической промышленности и применяется для раскисления и легирования стали, чугунов и сплавов. Продукция предприятия отвечает всем требованиям международных стандартов.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section style="padding-top: 0px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="section-heading" style="padding-top: 0px;">Цены</h1>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Предложение</th>
+                            <th>Марка</th>
+                            <th>Цена</th>
+                            <th>Размер</th>
+                        </tr>
+                    </thead>
+
+                    @foreach (var item in Model.Items)
+                    {
+                        <tr>
+                            <td>@item.Offer</td>
+                            <td>@item.Mark</td>
+                            <td>@item.Price</td>
+                            <td>@item.Size</td>
+                        </tr>
+                    }
+                </table>
+            </div>
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+</section>
+
+
+
+
+
+

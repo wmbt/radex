@@ -20,6 +20,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Site3", "Site3\Site3.csproj
 		{DFBFECD6-77DF-4031-B7F7-30436D65F6BD} = {DFBFECD6-77DF-4031-B7F7-30436D65F6BD}
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Titan1", "Titan1\Titan1.csproj", "{74C69A3F-96E1-48E0-8B4D-26599766D093}"
+	ProjectSection(ProjectDependencies) = postProject
+		{DFBFECD6-77DF-4031-B7F7-30436D65F6BD} = {DFBFECD6-77DF-4031-B7F7-30436D65F6BD}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Titan2", "Titan2\Titan2.csproj", "{57E6C2D6-BF04-4AB7-BF73-DBF83CFB21F7}"
+	ProjectSection(ProjectDependencies) = postProject
+		{DFBFECD6-77DF-4031-B7F7-30436D65F6BD} = {DFBFECD6-77DF-4031-B7F7-30436D65F6BD}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,6 +52,14 @@ Global
 		{7B99525C-3552-4042-9673-23966DBA259E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7B99525C-3552-4042-9673-23966DBA259E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7B99525C-3552-4042-9673-23966DBA259E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74C69A3F-96E1-48E0-8B4D-26599766D093}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74C69A3F-96E1-48E0-8B4D-26599766D093}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74C69A3F-96E1-48E0-8B4D-26599766D093}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74C69A3F-96E1-48E0-8B4D-26599766D093}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57E6C2D6-BF04-4AB7-BF73-DBF83CFB21F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57E6C2D6-BF04-4AB7-BF73-DBF83CFB21F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57E6C2D6-BF04-4AB7-BF73-DBF83CFB21F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57E6C2D6-BF04-4AB7-BF73-DBF83CFB21F7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "Контакты";
+}
+
+@section navigation{
+    <ul class="nav navbar-nav">
+        <li>@Html.ActionLink("Главная", "Index")</li>
+        <li>@Html.ActionLink("Прайс", "Price")</li>
+        <li class="active">@Html.ActionLink("Контакты", "Info")</li>
+        <li>@Html.ActionLink("О компании", "About")</li>
+    </ul>
+}
+
+<div class="row">
+    <div class="box">
+        <div class="col-lg-12" style="min-height: 500px;">
+            <hr>
+            <h2 class="intro-text text-center">
+                <strong>Контакты</strong>
+            </h2>
+            <hr>
+
+        </div>
+    </div>
+</div>
+
