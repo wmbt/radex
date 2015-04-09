@@ -5,7 +5,7 @@
 @section navigation{
     <ul class="nav navbar-nav">
         <li>@Html.ActionLink("Главная", "Index")</li>
-        <li>@Html.ActionLink("Прайс", "Price")</li>
+        @*<li>@Html.ActionLink("Прайс", "Price")</li>*@
         <li>@Html.ActionLink("Контакты", "Info")</li>
         <li class="active">@Html.ActionLink("О компании", "About")</li>
     </ul>
@@ -19,7 +19,21 @@
                 <strong>О компании</strong>
             </h2>
             <hr>
-            
+            <p>
+                Компания имеет свою производственную базу в Смоленской области,
+                обладающую объёмом выработки до 250 тонн/месяц.
+            </p>
+            <p>В продаже представлены ферротитаны следующих марок:</p>
+                <ul>
+                    <li>ФТи70С05</li>
+                    <li>ФТи70С08</li>
+                    <li>ФТи70С05Сн03</li>
+                    <li>ФТи70С1</li>
+                    <li>ФТи35С5</li>
+                    <li>ФТи35С7</li>
+                    <li>и др.</li>
+                </ul>
+            <p>Цена продукции от 354 до 1025 руб. за кг.</p>
         </div>
     </div>
 </div> 
