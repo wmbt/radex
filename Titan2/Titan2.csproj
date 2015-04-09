@@ -142,6 +142,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\business-casual.css" />
+    <Content Include="Content\common.css" />
     <Content Include="Content\intro-pic.jpg" />
     <Content Include="Content\slide-1.jpg" />
     <Content Include="Content\slide-2.jpg" />
