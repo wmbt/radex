@@ -30,4 +30,10 @@ namespace Site2.Models
         public string SortColumn { get; set; }
         public string SortOrder { get; set; }
     }
+
+    public class Tables 
+    {
+        public PriceTable T1 { get; set; }
+        public PriceTable T2 { get; set; }
+    }
 }

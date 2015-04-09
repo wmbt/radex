@@ -19,12 +19,23 @@ namespace Site2.Controllers
             var cs = ConfigurationManager.ConnectionStrings["DefaultDb"];
             var repo = new Repository(cs.ConnectionString);
 
-            return View(new PriceTable
+            var model = new Tables 
             {
-                Items = repo.GetItems("SITE2_PRICE", x => new TableItem(x), colName + " " + order).ToArray(),
-                SortColumn = colName,
-                SortOrder = order
-            });
+                T1 = new PriceTable
+                {
+                    Items = repo.GetItems("SITE2_PRICE", x => new TableItem(x), colName + " " + order).ToArray(),
+                    SortColumn = colName,
+                    SortOrder = order
+                },
+                T2 = new PriceTable
+                {
+                    Items = repo.GetItems("SITE2_PRICE_2", x => new TableItem(x), colName + " " + order).ToArray(),
+                    SortColumn = colName,
+                    SortOrder = order
+                }
+            };
+
+            return View(model);
             
         }
         public ActionResult Info()
